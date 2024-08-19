@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>User Management Interface</h1>
+    <form id="addUserForm" action="/add_user" method="post">
+        <h2>Add User</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Add User</button>
+    </form>
+
+    <form id="modifyUserForm" action="/modify_user" method="post">
+        <h2>Modify User</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="shell">New Shell:</label>
+        <input type="text" id="shell" name="shell" required>
+        <button type="submit">Modify User</button>
+    </form>
+
+    <form id="deleteUserForm" action="/delete_user" method="post">
+        <h2>Delete User</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Delete User</button>
+    </form>
+</body>
+</html>
